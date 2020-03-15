@@ -40,7 +40,7 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - _openmp_mutex              # [linux]
-    - libopenblas
+    - libblas
     - r-base
     - r-matrix
     - r-precisesums >=0.3
@@ -63,7 +63,6 @@ requirements:
     - r-units >=0.6_0
   run:
     - _openmp_mutex              # [linux]
-    - libopenblas
     - llvm-openmp                # [osx]
     - r-base
     - {{native}}gcc-libs         # [win]
