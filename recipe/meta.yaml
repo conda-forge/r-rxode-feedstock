@@ -41,6 +41,7 @@ requirements:
   host:
     - _openmp_mutex              # [linux]
     - libblas
+    - liblapack
     - r-base
     - r-matrix
     - r-precisesums >=0.3
