@@ -1,2 +1,3 @@
+SET TZ=UTC0
 "%R%" CMD INSTALL --build .
 IF %ERRORLEVEL% NEQ 0 exit 1
