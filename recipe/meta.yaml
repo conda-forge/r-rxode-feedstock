@@ -89,6 +89,7 @@ requirements:
 test:
   commands:
     - $R -e "library('RxODE')"           # [not win]
+    - SET TZ="UTC0"                      # [win]
     - "\"%R%\" -e \"library('RxODE')\""  # [win]
 
 about:
