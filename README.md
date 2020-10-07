@@ -3,13 +3,11 @@ About r-rxode
 
 Home: https://nlmixrdevelopment.github.io/RxODE/
 
-Package license: GPL-3
+Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rxode-feedstock/blob/master/LICENSE.txt)
 
 Summary: Facilities for running simulations from ordinary differential equation (ODE) models, such as pharmacometrics and other compartmental models.  A compilation manager translates the ODE model into C, compiles it, and dynamically loads the object code into R for improved computational efficiency.  An event table object facilitates the specification of complex dosing regimens (optional) and sampling schedules.  NB: The use of this package requires both C and Fortran compilers, for details on their use with R please see Section 6.3, Appendix A, and Appendix D in the "R Administration and Installation" manual. Also the code is mostly released under GPL.  The VODE and LSODA are in the public domain.  The information is available in the inst/COPYRIGHTS. You can also obtain the archived SnakeCharmR for python integration from CRAN archives <https://cran.r-project.org/src/contrib/Archive/SnakeCharmR/> or <https://github.com/nlmixrdevelopment/SnakeCharmR>.
-
-
 
 Current build status
 ====================
