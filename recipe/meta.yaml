@@ -94,7 +94,7 @@ test:
 
 about:
   home: https://nlmixrdevelopment.github.io/RxODE/
-  license: GPL-3
+  license: GPL-3.0-or-later
   summary: 'Facilities for running simulations from ordinary differential equation (ODE) models,
     such as pharmacometrics and other compartmental models.  A compilation manager translates
     the ODE model into C, compiles it, and dynamically loads the object code into R
