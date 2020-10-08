@@ -14,7 +14,8 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
+  skip: True  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,16 +29,16 @@ requirements:
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}sed               # [win]
-    - {{posix}}grep              # [win]
-    - {{posix}}autoconf
-    - {{posix}}automake          # [not win]
-    - {{posix}}automake-wrapper  # [win]
-    - {{posix}}pkg-config
-    - {{posix}}make
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}sed               # [win]
+    - {{ posix }}grep              # [win]
+    - {{ posix }}autoconf
+    - {{ posix }}automake          # [not win]
+    - {{ posix }}automake-wrapper  # [win]
+    - {{ posix }}pkg-config
+    - {{ posix }}make
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - _openmp_mutex              # [linux]
     - libblas
@@ -66,7 +67,7 @@ requirements:
     - _openmp_mutex              # [linux]
     - llvm-openmp                # [osx]
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
@@ -94,7 +95,7 @@ test:
 
 about:
   home: https://nlmixrdevelopment.github.io/RxODE/
-  license: GPL-3
+  license: GPL-3.0-or-later
   summary: 'Facilities for running simulations from ordinary differential equation (ODE) models,
     such as pharmacometrics and other compartmental models.  A compilation manager translates
     the ODE model into C, compiles it, and dynamically loads the object code into R
