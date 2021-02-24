@@ -1,4 +1,4 @@
-{% set version = "0.9.2-1" %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,16 +10,15 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RxODE_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RxODE/RxODE_{{ version }}.tar.gz
-  sha256: 58606785e3a0804880ff1f3235f6228c8054be39963aa4ba7120a8c1d5986191
+  sha256: b03b2d05c8805d4ef0ede836c55df625796c43c84ae3c1d3237b2ebc7e30ca97
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
-  skip: true  # [r_base == "3.5.1"]
 
 requirements:
   build:
@@ -44,23 +43,25 @@ requirements:
     - libblas
     - liblapack
     - r-base
-    - r-matrix
+    - r-bh
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
     - r-rcpparmadillo >=0.9.300.2.0
+    - r-rcppeigen >=0.3.3.3.0
+    - r-stanheaders >=2.18.0
     - r-assertthat
-    - r-brew
-    - r-cli
+    - r-backports
+    - r-checkmate
+    - r-cli >=2.0.0
     - r-dparser >=0.1.8
     - r-ggplot2
     - r-inline
-    - r-knitr
-    - r-lotri
+    - r-lotri >=0.2.2
     - r-magrittr
     - r-memoise
-    - r-mvnfast
-    - r-pillar
+    - r-qs
     - r-rex
+    - r-sitmo
     - r-sys
     - r-units >=0.6_0
   run:
@@ -68,23 +69,24 @@ requirements:
     - llvm-openmp                # [osx]
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
     - r-rcpparmadillo >=0.9.300.2.0
+    - r-rcppeigen >=0.3.3.3.0
+    - r-stanheaders >=2.18.0
     - r-assertthat
-    - r-brew
-    - r-cli
+    - r-backports
+    - r-checkmate
+    - r-cli >=2.0.0
     - r-dparser >=0.1.8
     - r-ggplot2
     - r-inline
-    - r-knitr
-    - r-lotri
+    - r-lotri >=0.2.2
     - r-magrittr
     - r-memoise
-    - r-mvnfast
-    - r-pillar
+    - r-qs
     - r-rex
+    - r-sitmo
     - r-sys
     - r-units >=0.6_0
 
