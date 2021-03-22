@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RxODE_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RxODE/RxODE_{{ version }}.tar.gz
-  sha256: 9f33299774885f615e44bd04bea1ee9a73df7a89a9fbbd99dc6b55c048fa5023
+  sha256: 3cead20e2c898ca80e3e971d28b14be32d90d4ab4daa3ead65a20474f6f9a95b
 
 build:
   merge_build_host: true  # [win]
@@ -42,7 +42,7 @@ requirements:
     - _openmp_mutex              # [linux]
     - libblas
     - liblapack
-    - r-base
+    - r-base >=4.0.0
     - r-bh
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
@@ -67,7 +67,7 @@ requirements:
   run:
     - _openmp_mutex              # [linux]
     - llvm-openmp                # [osx]
-    - r-base
+    - r-base >=4.0.0
     - {{ native }}gcc-libs         # [win]
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
