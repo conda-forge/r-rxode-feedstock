@@ -14,8 +14,8 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
-  skip: true  # [win or r_base == "3.6"]
+  number: 1
+  skip: true  # [r_base == "3.6"]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -42,7 +42,6 @@ requirements:
     - _openmp_mutex              # [linux]
     - libblas
     - liblapack
-  host:
     - r-base
     - r-bh
     - r-precisesums >=0.3
