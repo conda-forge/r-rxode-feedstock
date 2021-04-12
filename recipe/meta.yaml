@@ -42,13 +42,14 @@ requirements:
     - _openmp_mutex              # [linux]
     - libblas
     - liblapack
+  host:
     - r-base
     - r-bh
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
     - r-rcpparmadillo >=0.9.300.2.0
     - r-rcppeigen >=0.3.3.3.0
-    - r-stanheaders >=2.18.0
+    - r-stanheaders >=2.21.0
     - r-assertthat
     - r-backports
     - r-checkmate
@@ -63,17 +64,17 @@ requirements:
     - r-rex
     - r-sitmo
     - r-sys
-    - r-units >=0.6_0
   run:
     - _openmp_mutex              # [linux]
     - llvm-openmp                # [osx]
     - r-base
     - {{ native }}gcc-libs         # [win]
+    #- r-bh
     - r-precisesums >=0.3
     - r-rcpp >=0.12.3
     - r-rcpparmadillo >=0.9.300.2.0
     - r-rcppeigen >=0.3.3.3.0
-    - r-stanheaders >=2.18.0
+    - r-stanheaders >=2.21.0
     - r-assertthat
     - r-backports
     - r-checkmate
@@ -88,7 +89,6 @@ requirements:
     - r-rex
     - r-sitmo
     - r-sys
-    - r-units >=0.6_0
 
 test:
   commands:
