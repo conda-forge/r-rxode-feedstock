@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RxODE_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RxODE/RxODE_{{ version }}.tar.gz
-  sha256: 3c058ee2be955ca41cb352f60f92871e3c5974082ec5fce6f8c724fe783168ec
+  sha256: 370e3acd41c6c540272f915c4dbdb344be605f57e23ac422be3868d244aca88b
 
 build:
   merge_build_host: true  # [win]
